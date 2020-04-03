@@ -1,0 +1,12 @@
+{
+  "fxt_api":{
+  "host": "https://temple.dev.renrenfo.cn:2443/ts/v2",
+  "api_address": {
+    "Believers ": {
+      "Gift_list": "/live/app/temple/:temple_id/v4/gift?page_num=1&cur_page=1"
+    }
+
+  }
+  }
+
+}

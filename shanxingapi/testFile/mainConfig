@@ -1,0 +1,32 @@
+;法师端
+[Master]
+host = https://temple.dev.renrenfo.cn:2443/ts/v2
+;礼物列表
+Gift_list= /live/app/temple/61/v4/gift?page_num=5&cur_page=1
+
+;法师登录验证码授权
+grant_authorization= /user/app/v4/temple/:temple_id/auth/master-before
+
+;法师登录接口
+login_Master= /user/app/v4/temple/61/auth/master
+
+
+[db]
+;测试环境
+host = 172.16.10.240
+port = 3306
+username = yitaichang
+password = Ytc123456
+charset = utf8
+
+
+
+[sql]
+;相关SQL
+get_kitchen_order_info = SELECT * FROM `kitchen`.`produce_order_master` WHERE `order_id` = '{}'
+get_skus_id = SELECT * FROM `kitchen`.`produce_order_sku` WHERE `order_id` = '{}' AND `status` <> 'finish'
+
+
+[preKey]
+
+consumer_prekey = MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAImxbqVRASLIRFdYCDNtXVfjF+RjGyttH3PDwrFuU5iQvO8REFZCm8utIMWL5OkywOWVN51Iny6OnRMyoTi81fciNipzqLKwAVFwtgv8ExnD5pzriEgkWmn5LkVV+AbCGfp94bM+uqvXeAt4ArR0VJHuNeSBldUcYrgs7Pct839VAgMBAAECgYAiI5z0Xh4y+oZ/RXNbFN2U4dhVpwDghoDK2hmWlm0hoZlGiOuNB5zLJhS/Bg1uiEftZE7Sr2PQTknBrcbtY1yFOElWQ1lv8j1WQYdzHRZsvd/TI1ISBiEj9+zglB+I1fYVkAFK/cB7bOq276TJU8nOcQRlT04wQJBAN4m2KyAwyiWmCNHB0w3rd7BKj/EcutkPB+0WsoexL/Wm0GUWFwKTCN0+UjkrWHqx932MQP60zELIxpMrDyUegcQJBAMxhtjOH69Y8/OgqOkrhmKYJyVVmL9h3yeTePekUZM=
